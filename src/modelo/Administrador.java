@@ -25,6 +25,20 @@ public class Administrador extends Usuario {
         this.sucursal = sucursal;
     }
     
+    public void solicitarProducto(){
+        //TODO: Lógica de solicitud de producto
+    }
     
+    public void actualizarStock(){
+        //TODO: Lógica de actualizar stock
+    }
+    
+    public void gestionarLocalDatabase(){
+        //TODO: Lógica de gestión
+    }
+    
+    public void agregarUsuario(){
+        //TODO: Lógica para añadir usuario
+    }
     
 }

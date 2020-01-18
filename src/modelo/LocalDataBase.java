@@ -11,4 +11,5 @@ package modelo;
  */
 public class LocalDataBase {
     
+    
 }
