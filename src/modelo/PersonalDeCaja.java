@@ -31,6 +31,8 @@ public class PersonalDeCaja extends Usuario{
         //TODO: Lógica para consultar entregas
     }
     
+    
+    
     public void consultarTraslado(){
         //TODO: Lógica para consultar traslados
     }
@@ -42,4 +44,11 @@ public class PersonalDeCaja extends Usuario{
     public void buscarServicio(){
         //TODO: Lógica para buscar servicios
     }
+
+    @Override
+    public String toString() {
+        return "PersonalDeCaja{" + this.userName + '}';
+    }
+    
+    
 }

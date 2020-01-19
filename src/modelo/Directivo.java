@@ -16,14 +16,14 @@ public class Directivo extends Usuario {
     }
     
     public void consultarCentralDatabase(){
-        //TODO: lógica de consulta a la base de datos central
+        //TODO: Funcionalidad en construcción
     }
     
     public void consultarLocalDatabase(){
-        //TODO: lógica de consulta a la base de datos local
+        //TODO: Funcionalidad en construcción
     }
     
     public void agregarUsuario(){
-        //TODO: lógica para agregar a un nuevo empleado
+        //TODO: Funcionalidad en construcción
     }
 }

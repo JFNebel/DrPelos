@@ -16,10 +16,10 @@ public class JefeDeBodega extends Usuario{
     }
     
     public void gestionarPrecios(){
-        //TODO: Lógica de gestión
+        //TODO: Funcionalidad en construcción
     }
     
     public void confirmarEntrega(){
-        //TODO: Lógica de confirmación de entrega
+        //TODO: Funcionalidad en construcción
     }
 }

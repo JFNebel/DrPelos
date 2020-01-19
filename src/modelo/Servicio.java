@@ -15,6 +15,24 @@ public class Servicio {
     private String descripcion;
     private String categoria;
 
+    
+    
+    
+    /**
+     * Constructor de la clase
+     * @param nombre
+     * @param precio
+     * @param descripcion
+     * @param categoria 
+     */
+    public Servicio(String nombre, float precio, String descripcion, String categoria) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.categoria = categoria;
+    }
+    
+    //Setters & Getters
     public String getNombre() {
         return nombre;
     }

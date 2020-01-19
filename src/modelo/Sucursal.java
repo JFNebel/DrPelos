@@ -5,17 +5,49 @@
  */
 package modelo;
 
+import java.util.Collections;
 import java.util.List;
 
-/**Revisar que los setters y getters sí sean necesarios una vez ya avanzado el programa
+/**
  *
  * @author Juan Nebel
  */
 public class Sucursal {
     private LocalDataBase localDataBase;
     private Administrador administrador;
-    private List<PersonalDeCaja> personalDeCaja;
+    private final List<PersonalDeCaja> personalDeCaja;
 
+    /**
+     * Constructor de la clase
+     * @param localDataBase
+     * @param administrador
+     * @param personalDeCaja 
+     */
+    public Sucursal(LocalDataBase localDataBase, Administrador administrador, List<PersonalDeCaja> personalDeCaja) {
+        this.localDataBase = localDataBase;
+        this.administrador = administrador;
+        this.personalDeCaja = personalDeCaja;
+    }
+    
+    
+
+    //Técnica de refactoring: encapsular colección
+    public List<PersonalDeCaja> getPersonalDeCaja() {
+        return Collections.unmodifiableList(personalDeCaja);
+    }
+
+    public void addPersonalDeCaja(PersonalDeCaja persona) {
+         personalDeCaja.add(persona);
+    }
+    
+    public void removePersonalDeCaja(PersonalDeCaja persona) {
+         personalDeCaja.remove(persona);
+    }
+    
+    
+    
+    
+    //Setters & Getters
     public LocalDataBase getLocalDataBase() {
         return localDataBase;
     }
@@ -31,15 +63,5 @@ public class Sucursal {
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
     }
-
-    public List<PersonalDeCaja> getPersonalDeCaja() {
-        return personalDeCaja;
-    }
-
-    public void setPersonalDeCaja(List<PersonalDeCaja> personalDeCaja) {
-        this.personalDeCaja = personalDeCaja;
-    }
-    
-    
-    
+  
 }

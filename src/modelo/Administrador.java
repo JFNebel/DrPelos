@@ -10,35 +10,27 @@ package modelo;
  * @author Juan Nebel
  */
 public class Administrador extends Usuario {
-    private Sucursal sucursal;
     
-    public Administrador(String userName, String password, String email, String cedula, Sucursal sucursal) {
+    public Administrador(String userName, String password, String email, String cedula) {
         super(userName, password, email, cedula);
-        this.sucursal = sucursal;
     }
 
-    public Sucursal getSucursal() {
-        return sucursal;
-    }
-
-    public void setSucursal(Sucursal sucursal) {
-        this.sucursal = sucursal;
-    }
+    
     
     public void solicitarProducto(){
-        //TODO: Lógica de solicitud de producto
+        //TODO: Funcionalidad en construcción
     }
     
     public void actualizarStock(){
-        //TODO: Lógica de actualizar stock
+        //TODO: Funcionalidad en construcción
     }
     
     public void gestionarLocalDatabase(){
-        //TODO: Lógica de gestión
+        //TODO: Funcionalidad en construcción
     }
     
     public void agregarUsuario(){
-        //TODO: Lógica para añadir usuario
+        //TODO: Funcionalidad en construcción
     }
     
 }
