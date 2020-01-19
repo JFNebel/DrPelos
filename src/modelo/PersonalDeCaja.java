@@ -5,26 +5,56 @@
  */
 package modelo;
 
+import java.util.List;
+
 /** OJO, chequear el caso de BLAOTING para clases muy extensas (muchos métodos)
  * Es posible que sea necesario hacer otra clase o una interfaz
  * @author Juan Nebel
  */
 public class PersonalDeCaja extends Usuario{
     
+    /**
+     * Constructor de la clase
+     * @param userName
+     * @param password
+     * @param email
+     * @param cedula 
+     */
     public PersonalDeCaja(String userName, String password, String email, String cedula) {
         super(userName, password, email, cedula);
     }
     
-    public void generarRecibo(){
+    /**
+     * Obedece al literal 8
+     * @param cliente 
+     */
+    public void agregarCliente(Cliente cliente){
+        //TODO: Lógica para agregar un Cliente a la base de datos
+    }
+    
+    /**
+     * Debe poder recibir un cliento y tanto un productos como un servicios
+     * @param cliente
+     * @param productos
+     * @param servicios
+     */
+    public void generarCotización(Cliente cliente, List<Producto> productos, List<Servicio> servicios){
         //TODO: Lógica para generar un recibo
     }
     
+    
+    
+    
+    /**
+     * genera un recibo y
+     * Almacena el recibo en la base de datos
+     */
     public void realizarVenta(){
         //TODO: Lógica para realizar una venta
     }
     
-    public void agregarCliente(){
-        //TODO: Lógica para agregar un Cliente
+    public void generarRecibo(){
+        //TODO: Lógica para generar un recibo
     }
     
     public void consultarEntrega(){
@@ -34,11 +64,11 @@ public class PersonalDeCaja extends Usuario{
     
     
     public void consultarTraslado(){
-        //TODO: Lógica para consultar traslados
+        //TODO: Query a la base de datos
     }
     
-    public void buscarProducto(){
-        //TODO: Lógica para buscar productos
+    public void buscarProducto(String nombre){
+        //TODO: Query a la base de datos
     }
     
     public void buscarServicio(){

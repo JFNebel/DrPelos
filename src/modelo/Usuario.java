@@ -15,6 +15,13 @@ public abstract class Usuario {
     protected String email;
     protected String cedula;
 
+    /**
+     * Constructor de la clase
+     * @param userName
+     * @param password
+     * @param email
+     * @param cedula 
+     */
     public Usuario(String userName, String password, String email, String cedula) {
         this.userName = userName;
         this.password = password;
@@ -22,6 +29,7 @@ public abstract class Usuario {
         this.cedula = cedula;
     }
 
+    //Setters & Getters
     public String getUserName() {
         return userName;
     }

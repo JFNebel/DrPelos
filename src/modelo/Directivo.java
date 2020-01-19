@@ -11,10 +11,18 @@ package modelo;
  */
 public class Directivo extends Usuario {
     
+    /**
+     * Constructor de la clase
+     * @param userName
+     * @param password
+     * @param email
+     * @param cedula 
+     */
     public Directivo(String userName, String password, String email, String cedula) {
         super(userName, password, email, cedula);
     }
     
+    //Funcionalidades a ser añadidas en actualizaciones futuras
     public void consultarCentralDatabase(){
         //TODO: Funcionalidad en construcción
     }

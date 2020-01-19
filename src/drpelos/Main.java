@@ -21,6 +21,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        //Prueba de protected:
+        Administrador admin = new Administrador("Admin", "1234", "adsfdsa@hotmail.com", "asdfas");
+        System.out.println(admin.getUserName());
+        
+        /**
         //Prueba de Sucursal
         LocalDataBase localDataBase = new LocalDataBase();
         PersonalDeCaja removible = new PersonalDeCaja("OdioPuro", "1234", "adsfdsa@hotmail.com", "asdfas");
@@ -55,7 +61,7 @@ public class Main {
         }
         
         //Si necesitas remover de manera más específica hacer un equals
-        
+        **/
     }
     
 }
