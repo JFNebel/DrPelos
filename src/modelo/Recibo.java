@@ -15,10 +15,10 @@ import java.util.Random;
 public abstract class Recibo {
     protected int id;
     protected List<Producto> productos;
-    protected List<Servicio> servicios;
+    protected List<Oferta> servicios;
     protected float total;
 
-    public Recibo(List<Producto> productos, List<Servicio> servicios, float total) {
+    public Recibo(List<Producto> productos, List<Oferta> servicios, float total) {
         Random rand = new Random();
         id = rand.nextInt(1000000);
         this.id = id;
@@ -47,11 +47,11 @@ public abstract class Recibo {
         this.productos = productos;
     }
 
-    public List<Servicio> getServicios() {
+    public List<Oferta> getServicios() {
         return servicios;
     }
 
-    public void setServicios(List<Servicio> servicios) {
+    public void setServicios(List<Oferta> servicios) {
         this.servicios = servicios;
     }
 

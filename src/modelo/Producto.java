@@ -9,44 +9,19 @@ package modelo;
  *
  * @author Juan Nebel
  */
-public class Producto {
-    private String nombre;
-    private float precio;
-    private String descripcion;
-    private String categoría; //Este atributo existe sólo para permitir busqueda de producto por categoría (requisito del cliente)
+public class Producto extends Oferta{
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public float getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getCategoría() {
-        return categoría;
-    }
-
-    public void setCategoría(String categoría) {
-        this.categoría = categoría;
+    /**
+     * Constructor de la clase producto
+     * @param nombre
+     * @param precio
+     * @param descripcion
+     * @param categoria 
+     */
+    public Producto(String nombre, float precio, String descripcion, String categoria) {
+        super(nombre, precio, descripcion, categoria);
     }
 
     
-
 }

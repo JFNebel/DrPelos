@@ -31,12 +31,12 @@ public class PersonalDeCaja extends Usuario{
      * @param servicios
      * @return 
      */
-    public Cotizacion generarCotización(List<Producto> productos, List<Servicio> servicios){
+    public Cotizacion generarCotización(List<Producto> productos, List<Oferta> servicios){
         float total = 0;
         for(Producto p : productos){
             total = total + p.getPrecio();
         }
-        for(Servicio s : servicios){
+        for(Oferta s : servicios){
             total = total + s.getPrecio();
         }
         return new Cotizacion(productos, servicios, total);

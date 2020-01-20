@@ -17,7 +17,7 @@ public class Factura extends Recibo{
     private String formaDePago;
     private Date fecha;
     
-    public Factura(List<Producto> productos, List<Servicio> servicios, float total, Cliente emisor,
+    public Factura(List<Producto> productos, List<Oferta> servicios, float total, Cliente emisor,
             String formaDePago) {
         super(productos, servicios, total);
         this.emisor = emisor;
@@ -66,11 +66,11 @@ public class Factura extends Recibo{
         this.productos = productos;
     }
 
-    public List<Servicio> getServicios() {
+    public List<Oferta> getServicios() {
         return servicios;
     }
 
-    public void setServicios(List<Servicio> servicios) {
+    public void setServicios(List<Oferta> servicios) {
         this.servicios = servicios;
     }
 
@@ -80,6 +80,11 @@ public class Factura extends Recibo{
 
     public void setTotal(float total) {
         this.total = total;
+    }
+
+    @Override
+    public String toString() {
+        return "Factura{" + "emisor=" + emisor + ", formaDePago=" + formaDePago + ", fecha=" + fecha + '}';
     }
     
     

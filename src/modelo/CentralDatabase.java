@@ -15,7 +15,7 @@ public class CentralDatabase {
     private List<Usuario> usuarios;
     private List<Sucursal> sucursales;
     private List<Producto> productos;
-    private List<Servicio> servicios;
+    private List<Oferta> servicios;
 
     public List<Usuario> getUsuarios() {
         return usuarios;
@@ -41,11 +41,11 @@ public class CentralDatabase {
         this.productos = productos;
     }
 
-    public List<Servicio> getServicios() {
+    public List<Oferta> getServicios() {
         return servicios;
     }
 
-    public void setServicios(List<Servicio> servicios) {
+    public void setServicios(List<Oferta> servicios) {
         this.servicios = servicios;
     }
     
