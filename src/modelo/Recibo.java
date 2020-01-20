@@ -6,16 +6,63 @@
 package modelo;
 
 import java.util.List;
+import java.util.Random;
 
 /** Esta clase peca de primitive obsesion, hacer un refractoring para arreglar
  *
  * @author Juan Nebel
  */
-public class Recibo {
-    private int id;
-    private Usuario emisor;
-    private List<Producto> productos;
-    private List<Servicio> servicios;
+public abstract class Recibo {
+    protected int id;
+    protected List<Producto> productos;
+    protected List<Servicio> servicios;
+    protected float total;
+
+    public Recibo(List<Producto> productos, List<Servicio> servicios, float total) {
+        Random rand = new Random();
+        id = rand.nextInt(1000000);
+        this.id = id;
+        this.productos = productos;
+        this.servicios = servicios;
+        this.total = total;
+    }
+
+    
+    
+    
+    //Setters & Getters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
+
+    public List<Servicio> getServicios() {
+        return servicios;
+    }
+
+    public void setServicios(List<Servicio> servicios) {
+        this.servicios = servicios;
+    }
+
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
+    
     
     
 }
