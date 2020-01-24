@@ -13,13 +13,12 @@ public class Servicio extends Oferta{
     
     /**
      * Constructor de la clase Servicio
-     * @param nombre
      * @param precio
      * @param descripcion
      * @param categoria 
      */
-    public Servicio(String nombre, float precio, String descripcion, String categoria) {
-        super(nombre, precio, descripcion, categoria);
+    public Servicio(float precio, String descripcion, String categoria) {
+        super(precio, descripcion, categoria);
     }
     
 }

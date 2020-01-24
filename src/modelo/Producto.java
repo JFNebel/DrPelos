@@ -10,6 +10,7 @@ package modelo;
  * @author Juan Nebel
  */
 public class Producto extends Oferta{
+    private String nombre;
 
 
     /**
@@ -20,8 +21,31 @@ public class Producto extends Oferta{
      * @param categoria 
      */
     public Producto(String nombre, float precio, String descripcion, String categoria) {
-        super(nombre, precio, descripcion, categoria);
+        super(precio, descripcion, categoria);
+        this.nombre = nombre;
     }
+    
+    
+    //Setters & Getters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * toString() method
+     * @return 
+     */
+    @Override
+    public String toString() {
+        return "Producto{" + "nombre=" + nombre + '}';
+    }
+    
+    
+    
 
     
 }

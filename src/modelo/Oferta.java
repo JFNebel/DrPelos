@@ -10,7 +10,6 @@ package modelo;
  * @author Juan Nebel
  */
 public abstract class Oferta {
-    protected String nombre;
     protected float precio;
     protected String descripcion;
     protected String categoria;
@@ -25,22 +24,13 @@ public abstract class Oferta {
      * @param descripcion
      * @param categoria 
      */
-    public Oferta(String nombre, float precio, String descripcion, String categoria) {
-        this.nombre = nombre;
+    public Oferta(float precio, String descripcion, String categoria) {
         this.precio = precio;
         this.descripcion = descripcion;
         this.categoria = categoria;
     }
     
     //Setters & Getters
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public float getPrecio() {
         return precio;
     }

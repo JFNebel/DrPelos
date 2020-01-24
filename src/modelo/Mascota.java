@@ -12,9 +12,25 @@ package modelo;
 public class Mascota {
     private String nombre;
     private String raza;
-    private Cliente dueño;
+    private Cliente dueno;
     private boolean transportable;
 
+    /**
+     * Constructor de la clase
+     * @param nombre
+     * @param raza
+     * @param dueño
+     * @param transportable 
+     */
+    public Mascota(String nombre, String raza, Cliente dueño, boolean transportable) {
+        this.nombre = nombre;
+        this.raza = raza;
+        this.dueno = dueño;
+        this.transportable = transportable;
+    }
+
+    
+    //Setters & Getters
     public String getNombre() {
         return nombre;
     }
@@ -32,11 +48,11 @@ public class Mascota {
     }
 
     public Cliente getDueño() {
-        return dueño;
+        return dueno;
     }
 
     public void setDueño(Cliente dueño) {
-        this.dueño = dueño;
+        this.dueno = dueño;
     }
 
     public boolean isTransportable() {
@@ -46,6 +62,21 @@ public class Mascota {
     public void setTransportable(boolean transportable) {
         this.transportable = transportable;
     }
+
+    /**
+     * Metodo toString(), no colocar el dueño para evitar 
+     * @return 
+     */
+    @Override
+    public String toString() {
+        return "Mascota{" + "nombre=" + nombre + ", raza=" + raza + ", transportable=" + transportable + '}';
+    }
+
+    
+
+    
+    
+    
     
     
     

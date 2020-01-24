@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -25,14 +26,13 @@ public class Cliente {
      * @param apellido
      * @param cedula
      * @param domicilio
-     * @param mascotas 
      */
-    public Cliente(String nombre, String apellido, String cedula, String domicilio, List<Mascota> mascotas) {
+    public Cliente(String nombre, String apellido, String cedula, String domicilio) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
         this.domicilio = domicilio;
-        this.mascotas = mascotas;
+        this.mascotas = new ArrayList<>();
     }
 
     
@@ -86,6 +86,10 @@ public class Cliente {
 
     
 
+    /**
+     * Método toString()
+     * @return 
+     */
     @Override
     public String toString() {
         return "Cliente{" + "nombre=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula + ", domicilio=" + domicilio + ", mascotas=" + mascotas + '}';
