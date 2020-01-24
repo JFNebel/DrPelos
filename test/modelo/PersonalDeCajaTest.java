@@ -1,0 +1,112 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package modelo;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author JFNebel
+ */
+public class PersonalDeCajaTest {
+    
+    /**
+     * Test of generarCotización method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testGenerarCotización() {
+        System.out.println("testGenerarCotización");
+        ArrayList<Producto> productos = new ArrayList<>();
+        ArrayList<Servicio> servicios = new ArrayList<>();
+        productos.add(new Producto("Chocolate", 5.99f, "describiendo producto","alimento"));
+        productos.add(new Producto("leche", 4.01f, "describiendo producto","alimento"));
+        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", "asdfas");
+        Cotizacion result = pers.generarCotización(productos, servicios);
+        assertNotNull(result);
+    }
+
+    
+    /**
+     * Test of generarFactura method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testGenerarFactura(){
+        System.out.println("testGenerarFactura");
+        ArrayList<Producto> productos = new ArrayList<>();
+        ArrayList<Servicio> servicios = new ArrayList<>();
+        productos.add(new Producto("Chocolate", 5.99f, "describiendo producto","alimento"));
+        productos.add(new Producto("leche", 4.01f, "describiendo producto","alimento"));
+        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", "asdfas");
+        Cotizacion cotizacion = pers.generarCotización(productos, servicios);
+        String formaDePago = "Efectivo";
+         Cliente cliente = new Cliente("Cliente1", "1234", "adsfdsa@hotmail.com", "asdfas");
+        Factura result = pers.generarFactura(cotizacion, cliente, formaDePago);
+        assertNotNull(result);
+    }
+    
+    
+    /**
+     * Test of realizarVenta method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testRealizarVenta() {
+        // TODO: Crear prueba unitaria cuando exista conectividad
+    }
+
+    
+
+    
+    /**
+     * Test of agregarCliente method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testAgregarCliente() {
+        // TODO: Crear prueba unitaria cuando exista conectividad
+    }
+    
+    
+    /**
+     * Test of consultarEntrega method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testConsultarEntrega() {
+        // TODO: Crear prueba unitaria cuando exista conectividad
+    }
+
+    /**
+     * Test of consultarTraslado method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testConsultarTraslado() {
+        // TODO: Crear prueba unitaria cuando exista conectividad
+    }
+
+    /**
+     * Test of buscarProducto method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testBuscarProducto() {
+        // TODO: Crear prueba unitaria cuando exista conectividad
+    }
+
+    /**
+     * Test of buscarServicio method, of class PersonalDeCaja.
+     */
+    @Test
+    public void testBuscarServicio() {
+        // TODO: Crear prueba unitaria cuando exista conectividad
+    }
+
+    
+    
+}

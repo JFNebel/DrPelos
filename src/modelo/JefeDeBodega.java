@@ -22,7 +22,7 @@ public class JefeDeBodega extends Usuario{
         super(userName, password, email, cedula);
     }
     
-    //Funcionalidades a ser añadidas en actualizaciones futuras
+    //Funcionalidades a ser añadidas en actualizaciones futuras iteraciones (no son necesarias de implementar)
     public void gestionarPrecios(){
         //TODO: Funcionalidad en construcción
     }
