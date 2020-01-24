@@ -17,6 +17,7 @@ import modelo.Mascota;
 import modelo.PersonalDeCaja;
 import modelo.Producto;
 import modelo.Oferta;
+import modelo.Servicio;
 import modelo.Sucursal;
 import modelo.Traslado;
 
@@ -49,23 +50,24 @@ public class Main {
 
 
 /**
-        //Prueba de PersonalDeCaja
-        ArrayList<Producto> productos = new ArrayList<>();
-        ArrayList<Oferta> servicios = new ArrayList<>();
-        ArrayList<Mascota> mascotas = new ArrayList<>();
-        productos.add(new Producto("Chocolate", 5.99f, "describiendo producto","alimento"));
-        productos.add(new Producto("leche", 4.01f, "describiendo producto","alimento"));
-        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", "asdfas");
-        Cliente cliente = new Cliente("Cliente1", "1234", "adsfdsa@hotmail.com", "asdfas", mascotas);
-        System.out.println(pers);
-        
-        Cotizacion coti = pers.generarCotización(productos, servicios);
-        System.out.println(coti);
-        
-        
-        Factura fact = pers.generarFactura(coti, cliente, "efectivo");
-        System.out.println(fact);
-        **/
+//        //Pruebas personal de Caja  
+//        ArrayList<Producto> productos = new ArrayList<>();
+//        ArrayList<Servicio> servicios = new ArrayList<>();
+//        ArrayList<Mascota> mascotas = new ArrayList<>();
+//        productos.add(new Producto("Chocolate", 5.99f, "describiendo producto","alimento"));
+//        productos.add(new Producto("leche", 4.01f, "describiendo producto","alimento"));
+//        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", "asdfas");
+//        Cliente cliente = new Cliente("Cliente1", "1234", "adsfdsa@hotmail.com", "asdfas");
+//        System.out.println(pers);
+//        
+//        Cotizacion coti = pers.generarCotización(productos, servicios);
+//        System.out.println("Cotizacion: ");
+//        System.out.println(coti);
+//        
+//        
+//        Factura fact = pers.generarFactura(coti, cliente, "efectivo");
+//        System.out.println("Impresion de factura");
+//        System.out.println(fact);
         
         
         

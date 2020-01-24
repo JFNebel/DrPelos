@@ -17,7 +17,7 @@ public class Factura extends Recibo{
     private String formaDePago;
     private Date fecha;
     
-    public Factura(List<Producto> productos, List<Oferta> servicios, float total, Cliente emisor,
+    public Factura(List<Producto> productos, List<Servicio> servicios, float total, Cliente emisor,
             String formaDePago) {
         super(productos, servicios, total);
         this.emisor = emisor;
@@ -50,41 +50,10 @@ public class Factura extends Recibo{
         this.fecha = fecha;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public List<Producto> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
-    }
-
-    public List<Oferta> getServicios() {
-        return servicios;
-    }
-
-    public void setServicios(List<Oferta> servicios) {
-        this.servicios = servicios;
-    }
-
-    public float getTotal() {
-        return total;
-    }
-
-    public void setTotal(float total) {
-        this.total = total;
-    }
 
     @Override
     public String toString() {
-        return "Factura{" + "emisor=" + emisor + ", formaDePago=" + formaDePago + ", fecha=" + fecha + '}';
+        return "Factura{" + "emisor=" + emisor + ", formaDePago=" + formaDePago + ", fecha=" + fecha +'}';
     }
     
     

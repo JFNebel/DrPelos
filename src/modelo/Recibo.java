@@ -5,23 +5,19 @@
  */
 package modelo;
 
+import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 /** Esta clase peca de primitive obsesion, hacer un refractoring para arreglar
  *
  * @author Juan Nebel
  */
 public abstract class Recibo {
-    protected int id;
     protected List<Producto> productos;
-    protected List<Oferta> servicios;
+    protected List<Servicio> servicios;
     protected float total;
 
-    public Recibo(List<Producto> productos, List<Oferta> servicios, float total) {
-        Random rand = new Random();
-        id = rand.nextInt(1000000);
-        this.id = id;
+    public Recibo(List<Producto> productos, List<Servicio> servicios, float total) {
         this.productos = productos;
         this.servicios = servicios;
         this.total = total;
@@ -29,32 +25,34 @@ public abstract class Recibo {
 
     
     
+    //Técnica de refactoring: encapsular colecciónes
+    public List<Servicio> getServicios() {
+        return Collections.unmodifiableList(servicios);
+    }
+
+    public void addServicio(Servicio servicio) {
+         servicios.add(servicio);
+    }
+    
+    public void removeServicio(Servicio servicio) {
+         servicios.remove(servicio);
+    }
+    
+    public List<Producto> getProductos() {
+        return Collections.unmodifiableList(productos);
+    }
+
+    public void addProducto(Producto producto) {
+         productos.add(producto);
+    }
+    
+    public void removeProducto(Producto producto) {
+         productos.remove(producto);
+    }
+    
+    
     
     //Setters & Getters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public List<Producto> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
-    }
-
-    public List<Oferta> getServicios() {
-        return servicios;
-    }
-
-    public void setServicios(List<Oferta> servicios) {
-        this.servicios = servicios;
-    }
-
     public float getTotal() {
         return total;
     }

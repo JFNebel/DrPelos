@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Cotizacion extends Recibo{
     
-    public Cotizacion(List<Producto> productos, List<Oferta> servicios, float total) {
+    public Cotizacion(List<Producto> productos, List<Servicio> servicios, float total) {
         super(productos, servicios, total);
     }
 
