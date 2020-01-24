@@ -78,6 +78,7 @@ public class PersonalDeCaja extends Usuario{
      * @param recibo 
      */
     public void consultarEntrega(Recibo recibo){
+        
         //TODO: Query a la base de datos
     }
     
