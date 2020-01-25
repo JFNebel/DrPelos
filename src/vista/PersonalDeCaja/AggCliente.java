@@ -5,6 +5,8 @@
  */
 package vista.PersonalDeCaja;
 
+import controladorCaja.ControladorAggCliente;
+
 /**
  *
  * @author ricar
@@ -168,17 +170,20 @@ public class AggCliente extends javax.swing.JFrame {
             }
         });
     }
-
+public void conectaControlador(ControladorAggCliente c){
+    jButton1.addActionListener(c);
+    
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    public javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

@@ -48,6 +48,7 @@ public class PersonalDeCaja extends Usuario{
      */
     public void agregarCliente(Cliente cliente){
         //TODO: Lógica para agregar un Cliente a la base de datos
+        
     }
     
     /** 
