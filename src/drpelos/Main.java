@@ -23,6 +23,8 @@ import modelo.Recibo;
 import modelo.Servicio;
 import modelo.Sucursal;
 import modelo.Traslado;
+import vista.PersonalDeCaja.AggCliente;
+import vista.PersonalDeCaja.MenuPersonalCaja;
 
 /**
  *
@@ -34,7 +36,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
+      // MenuPersonalCaja view= new MenuPersonalCaja();
+       //view.setVisible(true);
 
 
         
