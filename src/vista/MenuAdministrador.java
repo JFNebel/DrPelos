@@ -6,7 +6,7 @@
 package vista;
 
 import vista.Administrador.ActualizarStock;
-import vista.Administrador.AgregarProducto;
+import vista.Administrador.SolicitarProducto;
 
 /**
  *
@@ -108,7 +108,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        AgregarProducto a = new AgregarProducto();
+        SolicitarProducto a = new SolicitarProducto();
         a.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 

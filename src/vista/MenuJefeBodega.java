@@ -6,7 +6,7 @@
 package vista;
 
 import vista.Administrador.ActualizarStock;
-import vista.Administrador.AgregarProducto;
+import vista.Administrador.SolicitarProducto;
 import vista.JefeBodega.ConfirmarEntrega;
 import vista.JefeBodega.GestionarPrecios;
 
