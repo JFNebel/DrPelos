@@ -22,7 +22,8 @@ public class LocalDataBase {
     private final List<Entrega> entregas;
     private final List<Servicio> servicios;
 
-    public LocalDataBase(HashMap<Producto, Integer> stock, List<Factura> transacciones, List<Cliente> clientes, List<Entrega> entregas, List<Servicio> servicios) {
+    public LocalDataBase(HashMap<Producto, Integer> stock, List<Factura> transacciones, 
+            List<Cliente> clientes, List<Entrega> entregas, List<Servicio> servicios) {
         this.stock = stock;
         this.transacciones = transacciones;
         this.clientes = clientes;

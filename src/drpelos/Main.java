@@ -6,6 +6,8 @@
 package drpelos;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import modelo.ADomicilio;
 import modelo.Administrador;
 import modelo.Cliente;
@@ -17,6 +19,7 @@ import modelo.Mascota;
 import modelo.PersonalDeCaja;
 import modelo.Producto;
 import modelo.Oferta;
+import modelo.Recibo;
 import modelo.Servicio;
 import modelo.Sucursal;
 import modelo.Traslado;
@@ -32,7 +35,42 @@ public class Main {
      */
     public static void main(String[] args) {
         
+        //Prueba de Admin y LocalDatabase
+        //Haciendo los campos de la local dataBase
+        HashMap<Producto, Integer> stock = new HashMap();
+        Producto p1 = new Producto("Chocolate", 5.99f, "describiendo producto","alimento");
+        Producto p2 = new Producto("leche", 4.01f, "describiendo producto","alimento");
+        stock.put(p1, 400);
+        stock.put(p2, 3);
+        
+        
+        List<Factura> transacciones = new ArrayList<>();
+        List<Cliente> clientes = new ArrayList<>();
+        List<Servicio> servicios = new ArrayList<>();
+        List<Entrega> entregas = new ArrayList<>();
 
+        
+           
+        LocalDataBase localDataBase = new LocalDataBase(stock, transacciones,clientes, entregas, servicios);
+        
+        
+
+        Administrador admin = new Administrador("Admin", "1234", "adsfdsa@hotmail.com", "asdfas");
+        ArrayList<PersonalDeCaja> personalDeCaja = new ArrayList<>();
+        Sucursal sucursal = new Sucursal(localDataBase, admin, personalDeCaja);
+        admin.setSucursal(sucursal);
+        
+        admin.actualizarStock(p2, 97);
+        
+        System.out.println("El numero de leche ahora es: " + localDataBase.getStock().get(p2));
+        
+        admin.actualizarStock(p2, -100);
+        
+        System.out.println("El numero de leche ahora es: " + localDataBase.getStock().get(p2));
+
+
+        
+        
     }
     
 }
