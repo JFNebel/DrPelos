@@ -16,6 +16,7 @@ public class Sucursal {
     private LocalDataBase localDataBase;
     private Administrador administrador;
     private final List<PersonalDeCaja> personalDeCaja;
+    private int idSucursal;
 
     /**
      * Constructor de la clase
@@ -27,9 +28,14 @@ public class Sucursal {
         this.localDataBase = localDataBase;
         this.administrador = administrador;
         this.personalDeCaja = personalDeCaja;
+
+        this.idSucursal= generarAleatorio();
     }
     
-    
+        public static int generarAleatorio(){
+        int numero= (int)(Math.random()*100+1);
+        return numero;
+    }
 
     //Técnica de refactoring: encapsular colección
     public List<PersonalDeCaja> getPersonalDeCaja() {
@@ -44,10 +50,15 @@ public class Sucursal {
          personalDeCaja.remove(persona);
     }
     
-    
-    
-    
+    public int getIdSucursal() {
+        return idSucursal;
+    }
+
     //Setters & Getters
+    public void setIdSucursal(int idSucursal) {    
+        this.idSucursal = idSucursal;
+    }
+
     public LocalDataBase getLocalDataBase() {
         return localDataBase;
     }
@@ -63,5 +74,7 @@ public class Sucursal {
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
     }
-  
+
+
+    
 }

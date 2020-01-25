@@ -14,18 +14,32 @@ import java.util.List;
  */
 public class Factura extends Recibo{
     private Cliente emisor;
-    private String formaDePago;
+    private TipoPago formaDePago;
     private Date fecha;
+    private int idFactura;
     
     public Factura(List<Producto> productos, List<Servicio> servicios, float total, Cliente emisor,
-            String formaDePago) {
+            TipoPago formaDePago) {
         super(productos, servicios, total);
         this.emisor = emisor;
         this.formaDePago = formaDePago;
         this.fecha = new Date();
-        
+        this.idFactura= generarAleatorio();
     }
 
+    public int getIdFactura() {
+        return idFactura;
+    }
+
+    public void setIdFactura(int idFactura) {
+        this.idFactura = idFactura;
+    }
+
+    public int generarAleatorio(){
+        int numero= (int)(Math.random()*100+1);
+        return numero;
+    }
+            
     public Cliente getEmisor() {
         return emisor;
     }
@@ -34,11 +48,11 @@ public class Factura extends Recibo{
         this.emisor = emisor;
     }
 
-    public String getFormaDePago() {
-        return formaDePago;
+    public int getFormaDePago() {
+        return formaDePago.getIdPago();
     }
 
-    public void setFormaDePago(String formaDePago) {
+    public void setFormaDePago(TipoPago formaDePago) {
         this.formaDePago = formaDePago;
     }
 

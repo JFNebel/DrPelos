@@ -33,7 +33,8 @@ public class ControladorAggCliente implements ActionListener {
      if(noVacio)
      {
          //llamar agregarcliente de la clase personaldecaja
-         personal.agregarCliente(new Cliente(nombre,apellido,cedula,direccion));
+         //falta agregar barras a la vista
+         //personal.agregarCliente(new Cliente(nombre,apellido,cedula,direccion));
     }
     
     

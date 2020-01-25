@@ -25,7 +25,7 @@ public class PersonalDeCajaTest {
         ArrayList<Servicio> servicios = new ArrayList<>();
         productos.add(new Producto("Chocolate", 5.99f, "describiendo producto","alimento"));
         productos.add(new Producto("leche", 4.01f, "describiendo producto","alimento"));
-        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", "asdfas");
+        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", 9324);
         Cotizacion result = pers.generarCotización(productos, servicios);
         assertNotNull(result);
     }
@@ -41,10 +41,10 @@ public class PersonalDeCajaTest {
         ArrayList<Servicio> servicios = new ArrayList<>();
         productos.add(new Producto("Chocolate", 5.99f, "describiendo producto","alimento"));
         productos.add(new Producto("leche", 4.01f, "describiendo producto","alimento"));
-        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", "asdfas");
+        PersonalDeCaja pers = new PersonalDeCaja("Personita de caja", "1234", "adsfdsa@hotmail.com", 5490);
         Cotizacion cotizacion = pers.generarCotización(productos, servicios);
-        String formaDePago = "Efectivo";
-         Cliente cliente = new Cliente("Cliente1", "1234", "adsfdsa@hotmail.com", "asdfas");
+        TipoPago formaDePago = new TipoPago(1,"Efectivo") ;
+         Cliente cliente = new Cliente("Cliente1", "Santana",950,"villa del rey", "adsfdsa@hotmail.com","0926378864","0930229");
         Factura result = pers.generarFactura(cotizacion, cliente, formaDePago);
         assertNotNull(result);
     }

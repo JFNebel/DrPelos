@@ -13,7 +13,7 @@ public abstract class Usuario {
     protected String userName;
     protected String password;
     protected String email;
-    protected String cedula;
+    protected int cedula;
 
     /**
      * Constructor de la clase
@@ -22,7 +22,7 @@ public abstract class Usuario {
      * @param email
      * @param cedula 
      */
-    public Usuario(String userName, String password, String email, String cedula) {
+    public Usuario(String userName, String password, String email, int cedula) {
         this.userName = userName;
         this.password = password;
         this.email = email;
@@ -54,11 +54,11 @@ public abstract class Usuario {
         this.email = email;
     }
 
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
     

@@ -18,7 +18,7 @@ public class Directivo extends Usuario {
      * @param email
      * @param cedula 
      */
-    public Directivo(String userName, String password, String email, String cedula) {
+    public Directivo(String userName, String password, String email, int cedula) {
         super(userName, password, email, cedula);
     }
     

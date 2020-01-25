@@ -18,7 +18,7 @@ public class JefeDeBodega extends Usuario{
      * @param email
      * @param cedula 
      */
-    public JefeDeBodega(String userName, String password, String email, String cedula) {
+    public JefeDeBodega(String userName, String password, String email, int cedula) {
         super(userName, password, email, cedula);
     }
     

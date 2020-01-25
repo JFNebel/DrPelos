@@ -28,7 +28,7 @@ public class ClienteTest {
     public void testAddMascota() {
         System.out.println("testAddMascota");
         ArrayList<Mascota> mascT = new ArrayList<>();
-        Cliente cliente = new Cliente("Cliente1", "1234", "adsfdsa@hotmail.com", "asdfas");        
+        Cliente cliente = new Cliente("Cliente1", "Santana",950,"villa del rey", "adsfdsa@hotmail.com","0926378864","0930229");        
         Mascota masc1 = new Mascota( "Tai", "Siamés", cliente, true);
         Mascota masc2 = new Mascota( "Luna", "Molestia", cliente, false);
         Mascota masc3 = new Mascota( "Vitruvio", "Negro", cliente, true);
@@ -51,7 +51,7 @@ public class ClienteTest {
     public void testRemoveMascota() {
         System.out.println("testRemoveMascota");
         ArrayList<Mascota> mascT = new ArrayList<>();
-        Cliente cliente = new Cliente("Cliente1", "1234", "adsfdsa@hotmail.com", "asdfas");        
+        Cliente cliente = new Cliente("Cliente1", "Santana",950,"villa del rey", "adsfdsa@hotmail.com","0926378864","0930229");        
         Mascota masc1 = new Mascota( "Tai", "Siamés", cliente, true);
         Mascota masc2 = new Mascota( "Luna", "Molestia", cliente, false);
         Mascota masc3 = new Mascota( "Vitruvio", "Negro", cliente, true);

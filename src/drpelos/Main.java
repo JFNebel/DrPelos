@@ -55,7 +55,7 @@ public class Main {
         
         
 
-        Administrador admin = new Administrador("Admin", "1234", "adsfdsa@hotmail.com", "asdfas");
+        Administrador admin = new Administrador("Admin", "1234", "adsfdsa@hotmail.com", 12344);
         ArrayList<PersonalDeCaja> personalDeCaja = new ArrayList<>();
         Sucursal sucursal = new Sucursal(localDataBase, admin, personalDeCaja);
         admin.setSucursal(sucursal);

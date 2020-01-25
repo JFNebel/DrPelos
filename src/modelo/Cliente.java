@@ -16,9 +16,12 @@ import java.util.List;
 public class Cliente {
     private String nombre;
     private String apellido;
-    private String cedula;
+    private int cedula;
     private String domicilio;
     private final List<Mascota> mascotas;
+    private String correo;
+    private String celular;
+    private String telefono;
 
     /**
      * Constructor de la clase Cliente
@@ -27,12 +30,15 @@ public class Cliente {
      * @param cedula
      * @param domicilio
      */
-    public Cliente(String nombre, String apellido, String cedula, String domicilio) {
+    public Cliente(String nombre, String apellido, int cedula, String domicilio, String correo, String celular, String telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
         this.domicilio = domicilio;
         this.mascotas = new ArrayList<>();
+        this.correo= correo;
+        this.telefono=telefono;
+        this.celular= celular;
     }
 
     
@@ -68,11 +74,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
 
@@ -82,6 +88,30 @@ public class Cliente {
 
     public void setDomicilio(String domicilio) {
         this.domicilio = domicilio;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     

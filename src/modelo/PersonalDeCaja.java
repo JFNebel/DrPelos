@@ -5,7 +5,15 @@
  */
 package modelo;
 
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /** OJO, chequear el caso de BLAOTING para clases muy extensas (muchos métodos)
  * Es posible que sea necesario hacer otra clase o una interfaz
@@ -20,7 +28,7 @@ public class PersonalDeCaja extends Usuario{
      * @param email
      * @param cedula 
      */
-    public PersonalDeCaja(String userName, String password, String email, String cedula) {
+    public PersonalDeCaja(String userName, String password, String email, int cedula) {
         super(userName, password, email, cedula);
     }
     
@@ -46,9 +54,43 @@ public class PersonalDeCaja extends Usuario{
      * Obedece al literal 8
      * @param cliente 
      */
-    public void agregarCliente(Cliente cliente){
+    Connection conectar;//
+    PreparedStatement pst;
+    ResultSet rs;
+    public boolean agregarCliente(Cliente cliente){
         //TODO: Lógica para agregar un Cliente a la base de datos
+        String sql = "INSERT INTO Cliente (cedula,nombre,correo,celular,telefono,direccion) VALUES (?,?,?,?,?,?)";
+
+
+        try 
+        {
+        conectar = Conexion.getConexion();
+        pst = conectar.prepareStatement(sql);
         
+        pst.setInt(1,cliente.getCedula());
+        pst.setString(2, cliente.getNombre()+" "+cliente.getApellido());
+        pst.setString(3, cliente.getCorreo());
+        pst.setString(4, cliente.getCelular());
+        pst.setString(5, cliente.getTelefono());
+        pst.setString(6, cliente.getDomicilio());
+        
+        int i = pst.executeUpdate();         
+            
+        if (i != 0)
+        {    //visualiza
+                //JOptionPane.showMessageDialog(null,"Los datos se han guardado satisfactoriamente");
+                return true;
+        }else{
+            //visualiza
+            //JOptionPane.showMessageDialog(null,"Error en la transaccion");
+                return false;
+        }
+            
+        }catch(SQLException e){            
+            //para mostrar el error
+            //JOptionPane.showMessageDialog(null, e.getMessage());
+            return false;
+        }
     }
     
     /** 
@@ -57,9 +99,41 @@ public class PersonalDeCaja extends Usuario{
      * @param cliente
      * @param formaDePago
      */
-    public void realizarVenta(Cotizacion cotizacion, Cliente cliente, String formaDePago){
+    public boolean realizarVenta(Cotizacion cotizacion, Cliente cliente, TipoPago formaDePago){
         Factura factura = generarFactura(cotizacion, cliente, formaDePago);
         //TODO: Lógica para almacenar la factura en base de datos local
+        String sql = "INSERT INTO Cliente (idFactura,fechaEmision,sucursal,cliente,usuarioEmisor,tipoPago,iva,total) VALUES (?,?,?,?,?,?,?,?)";
+        try 
+        {
+        conectar = Conexion.getConexion();
+        pst = conectar.prepareStatement(sql);
+        
+        pst.setInt(1,factura.getIdFactura());
+        pst.setDate(2, (Date) factura.getFecha());
+        pst.setInt(3, Sucursal.generarAleatorio());
+        pst.setInt(4, cliente.getCedula());
+        pst.setInt(5,this.getCedula());
+        pst.setInt(6, formaDePago.getIdPago());
+        pst.setInt(7, 12);
+        pst.setInt(8, (int)(cotizacion.getTotal()));
+        
+        int i = pst.executeUpdate();         
+            
+        if (i != 0)
+        {    //visualiza
+                //JOptionPane.showMessageDialog(null,"Los datos se han guardado satisfactoriamente");
+                return true;
+        }else{
+            //visualiza
+            //JOptionPane.showMessageDialog(null,"Error en la transaccion");
+                return false;
+        }
+            
+        }catch(SQLException e){            
+            //para mostrar el error
+            //JOptionPane.showMessageDialog(null, e.getMessage());
+            return false;
+        }
     }
     
     /**
@@ -69,7 +143,7 @@ public class PersonalDeCaja extends Usuario{
      * @param formaDePago
      * @return 
      */
-    public Factura generarFactura(Cotizacion cotizacion, Cliente cliente, String formaDePago){
+    public Factura generarFactura(Cotizacion cotizacion, Cliente cliente, TipoPago formaDePago){
         return new Factura(cotizacion.getProductos(), cotizacion.getServicios(), cotizacion.getTotal(), cliente, formaDePago);
     }
     
@@ -78,9 +152,27 @@ public class PersonalDeCaja extends Usuario{
      * Hace una consulta sobre una entrega a la base de datos por medio del id del recibo
      * @param recibo 
      */
-    public void consultarEntrega(Recibo recibo){
-        
+    public void consultarEntrega(String tabla,String campo){ 
         //TODO: Query a la base de datos
+        String sql = "SELECT * FROM "+tabla+"WHERE clave= ?";
+
+        try{
+            conectar= Conexion.getConexion();
+            pst = conectar.prepareStatement(sql);
+            pst.setString(1,campo);
+            rs = pst.executeQuery();
+            
+            if(rs.next()){
+                //metodo para mostrar en la vista(rs.getCampo("id"))
+                //asi para todos los campos que se quiera mostrar en la vista
+            }
+            
+        }
+        catch(SQLException e){            
+        //para mostrar el error
+            //JOptionPane.showMessageDialog(null, e.getMessage());
+            System.out.println(e);
+        }
     }
     
     
@@ -90,6 +182,7 @@ public class PersonalDeCaja extends Usuario{
      */
     public void consultarTraslado(Recibo recibo){
         //TODO: Query a la base de datos
+        
     }
     
     /**
@@ -98,6 +191,25 @@ public class PersonalDeCaja extends Usuario{
      */
     public void buscarProducto(String nombre){
         //TODO: Query a la base de datos
+        String sql = "SELECT * FROM Producto WHERE clave= ?";
+
+        try{
+            conectar= Conexion.getConexion();
+            pst = conectar.prepareStatement(sql);
+            pst.setString(1,nombre);
+            rs = pst.executeQuery();
+            
+            if(rs.next()){
+                //metodo_para_mostrar_en_la_vista(rs.getCampo("id"))
+                //asi para todos los campos que se quiera mostrar en la vista
+            }
+            
+        }
+        catch(SQLException e){            
+        //para mostrar el error
+            //JOptionPane.showMessageDialog(null, e.getMessage());
+            System.out.println(e);
+        }
     }
     
     /**
@@ -106,12 +218,34 @@ public class PersonalDeCaja extends Usuario{
      */
     public void buscarServicio(String nombre){
         //TODO: Lógica para buscar servicios
+        String sql = "SELECT * FROM Servicio WHERE clave= ?";
+
+        try{
+            conectar= Conexion.getConexion();
+            pst = conectar.prepareStatement(sql);
+            pst.setString(1,nombre);
+            rs = pst.executeQuery();
+            
+            if(rs.next()){
+//                // segun el campo que se valla a mostrar
+                //metodo para mostrar en la vista(rs.getCampo("id"))
+                //asi para todos los campos que se quiera mostrar en la vista
+            }
+            
+        }
+        catch(SQLException e){            
+        //para mostrar el error
+            //JOptionPane.showMessageDialog(null, e.getMessage());
+            System.out.println(e);
+        }
     }
 
     @Override
     public String toString() {
         return "PersonalDeCaja{" + this.userName + '}';
     }
+    
+    //gettes, setters
     
     
 }
