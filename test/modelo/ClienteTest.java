@@ -16,12 +16,9 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author JFNebel
+ * @author Juan Nebel
  */
 public class ClienteTest {
-    
-    
-
     
 
     /**
@@ -70,7 +67,5 @@ public class ClienteTest {
         
         assertEquals(mascT, cliente.getMascotas());
     }
-
-    
     
 }

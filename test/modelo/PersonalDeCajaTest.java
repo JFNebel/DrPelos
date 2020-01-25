@@ -6,17 +6,12 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  *
- * @author JFNebel
+ * @author Juan Nebel
  */
 public class PersonalDeCajaTest {
     
@@ -106,7 +101,6 @@ public class PersonalDeCajaTest {
     public void testBuscarServicio() {
         // TODO: Crear prueba unitaria cuando exista conectividad
     }
-
     
     
 }
