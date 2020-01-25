@@ -42,7 +42,7 @@ public class GestionarCentralDB extends javax.swing.JFrame {
 
         jLabel2.setText("Query:");
 
-        jLabel3.setText("Resultado:");
+        jLabel3.setText("Resultados:");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -65,7 +65,7 @@ public class GestionarCentralDB extends javax.swing.JFrame {
                         .addComponent(jButton1))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2))
                         .addGap(18, 18, 18)
