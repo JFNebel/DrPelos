@@ -29,6 +29,9 @@ public class Cliente {
      * @param apellido
      * @param cedula
      * @param domicilio
+     * @param correo
+     * @param celular
+     * @param telefono
      */
     public Cliente(String nombre, String apellido, int cedula, String domicilio, String correo, String celular, String telefono) {
         this.nombre = nombre;
