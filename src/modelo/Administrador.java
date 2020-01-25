@@ -10,6 +10,7 @@ package modelo;
  * @author Juan Nebel
  */
 public class Administrador extends Usuario {
+    Sucursal sucursal;
     
     /**
      * Constructor de la clase
@@ -24,31 +25,35 @@ public class Administrador extends Usuario {
 
     
     /**
-     * Obedece al literal 13
-     * @param nombre
+     * Método que permite aumentar una cantidad determinada de un producto en el stock local
+     * @param producto
      * @param cantidad
      */
-    public void solicitarProducto(String nombre, int cantidad){
-        //TODO:
-        /** En caso de no tener el producto debo añadirlo a la lista de productos
-         *  En caso de tener el producto registrado en stock, aumentar la cantidad 
-         */
+    public void solicitarProducto(Producto producto, int cantidad){
+        sucursal.getLocalDataBase().addProducto(producto, cantidad); //El método add producto hace la validación de si está o no en la localDatabase
     }
     
     /**
-     * Obedece al literal 13
-     * @param nombre
+     * Método que permite modificar la cantidad disponible de un producto (actualiza)
+     * @param producto
      * @param cantidad
      */
-    public void actualizarStock(String nombre, int cantidad){
-        //TODO:
-        /** Aquí debe haber un patrón de diseño
-         * Debo poder aumentar y disminuir cantidad de un producto
-         */
+    public void actualizarStock(Producto producto, int cantidad){
+        sucursal.getLocalDataBase().addProducto(producto, cantidad);        
+    }
+
+    //Setters & Getters
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
     
     
-    //Funcionalidades a ser añadidas en actualizaciones futuras
+    
+    //Funcionalidades a ser añadidas en actualizaciones futuras (el documento no pide su implementación)
     public void gestionarLocalDatabase(){
         //TODO: Funcionalidad en construcción
     }
@@ -56,5 +61,6 @@ public class Administrador extends Usuario {
     public void agregarUsuario(){
         //TODO: Funcionalidad en construcción
     }
+    
     
 }
