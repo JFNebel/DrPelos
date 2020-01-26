@@ -19,8 +19,8 @@ public class Conexion {
     // Declaramos los datos de conexion a la bd
     private static final String driver="com.mysql.jdbc.Driver";
     private static final String user="root";
-    private static final String pass="12345";
-    private static final String url="jdbc:mysql://localhost/diseñosoftware";
+    private static final String pass="123456";
+    private static final String url="jdbc:mysql://localhost/DrPelos";
     
     
         // Funcion que va conectarse a mi bd de mysql

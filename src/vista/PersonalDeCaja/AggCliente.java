@@ -6,6 +6,9 @@
 package vista.PersonalDeCaja;
 
 import controladorCaja.ControladorAggCliente;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 import modelo.MetodosConexion;
 
 /**
@@ -184,7 +187,7 @@ public class AggCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap())
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -261,7 +264,7 @@ public void conectaControlador(ControladorAggCliente c){
     
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -271,12 +274,43 @@ public void conectaControlador(ControladorAggCliente c){
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    public javax.swing.JTextField txtapellido;
-    public javax.swing.JTextField txtcedula;
-    public javax.swing.JTextField txtcelular;
-    public javax.swing.JTextField txtcorreo;
-    public javax.swing.JTextField txtdireccion;
-    public javax.swing.JTextField txtelefono;
-    public javax.swing.JTextField txtnombre;
+    private javax.swing.JTextField txtapellido;
+    private javax.swing.JTextField txtcedula;
+    private javax.swing.JTextField txtcelular;
+    private javax.swing.JTextField txtcorreo;
+    private javax.swing.JTextField txtdireccion;
+    private javax.swing.JTextField txtelefono;
+    private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
+
+    public String getTxtapellido() {
+        return txtapellido.getText();
+    }
+
+    public String getTxtcedula() {
+        return txtcedula.getText();
+    }
+
+    public String getTxtcelular() {
+        return txtcelular.getText();
+    }
+
+    public String getTxtcorreo() {
+        return txtcorreo.getText();
+    }
+
+    public String getTxtdireccion() {
+        return txtdireccion.getText();
+    }
+
+    public String getTxtelefono() {
+        return txtelefono.getText();
+    }
+
+    public String getTxtnombre() {
+        return txtnombre.getText();
+    }
+
+
 }
+
