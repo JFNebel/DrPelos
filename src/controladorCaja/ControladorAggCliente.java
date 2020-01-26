@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import modelo.PersonalDeCaja;
 import modelo.Cliente;
+import modelo.MetodosConexion;
 import vista.PersonalDeCaja.AggCliente;
 
 /**
@@ -27,20 +28,24 @@ public class ControladorAggCliente implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
      
-     boolean noVacio=!(this.view.jTextField1.getText().isEmpty() && this.view.jTextField2.getText().isEmpty() && this.view.jTextField3.getText().isEmpty() && this.view.jTextField4.getText().isEmpty()
-             && this.view.jTextField5.getText().isEmpty() && this.view.jTextField6.getText().isEmpty() && this.view.jTextField7.getText().isEmpty());
+     boolean noVacio=!(this.view.txtnombre.getText().isEmpty() && this.view.txtapellido.getText().isEmpty() && this.view.txtdireccion.getText().isEmpty() && this.view.txtcedula.getText().isEmpty()
+             && this.view.txtcorreo.getText().isEmpty() && this.view.txtcelular.getText().isEmpty() && this.view.txtelefono.getText().isEmpty());
      if(noVacio)
      {
        try {
-         String nombre=this.view.jTextField1.getText();
-         String apellido=this.view.jTextField2.getText();
-         String direccion=this.view.jTextField3.getText();
-         int cedula=Integer.parseInt(this.view.jTextField4.getText());
-         String correo=this.view.jTextField5.getText();
-         String celular=this.view.jTextField6.getText();
-         String telefono=this.view.jTextField7.getText();
+         String nombre=this.view.txtnombre.getText();
+         String apellido=this.view.txtapellido.getText();
+         String direccion=this.view.txtdireccion.getText();
+         int cedula=Integer.parseInt(this.view.txtcedula.getText());
+         String correo=this.view.txtcorreo.getText();
+         String celular=this.view.txtcelular.getText();
+         String telefono=this.view.txtelefono.getText();
          
          personal.agregarCliente(new Cliente(nombre,apellido,cedula,direccion,correo,celular,telefono));
+         
+       
+        
+        
        }
        catch(Exception e) {
          JOptionPane.showMessageDialog(null,"Ingreso incorrecto de datos");
