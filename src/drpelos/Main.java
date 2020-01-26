@@ -5,26 +5,7 @@
  */
 package drpelos;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import modelo.ADomicilio;
-import modelo.Administrador;
-import modelo.Cliente;
-import modelo.Cotizacion;
-import modelo.Entrega;
-import modelo.Factura;
-import modelo.LocalDataBase;
-import modelo.Mascota;
-import modelo.PersonalDeCaja;
-import modelo.Producto;
-import modelo.Oferta;
-import modelo.Recibo;
-import modelo.Servicio;
-import modelo.Sucursal;
-import modelo.Traslado;
-import vista.PersonalDeCaja.AggCliente;
-import vista.PersonalDeCaja.MenuPersonalCaja;
+import vista.SistemaGeneral;
 
 /**
  *
@@ -36,17 +17,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      // MenuPersonalCaja view= new MenuPersonalCaja();
-       //view.setVisible(true);
-
-
-        
-        
-    }
-    
+        SistemaGeneral view= new SistemaGeneral();
+        view.setVisible(true);            
+    }    
 }
-
-
 
 
         //Prueba de Admin y LocalDatabase
