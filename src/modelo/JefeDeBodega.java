@@ -24,10 +24,10 @@ public class JefeDeBodega extends Usuario{
     
     //Funcionalidades a ser añadidas en actualizaciones futuras iteraciones (no son necesarias de implementar)
     public void gestionarPrecios(){
-        //TODO: Funcionalidad en construcción
+        //: Funcionalidad en construcción
     }
     
     public void confirmarEntrega(){
-        //TODO: Funcionalidad en construcción
+        //: Funcionalidad en construcción
     }
 }

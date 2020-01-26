@@ -24,14 +24,14 @@ public class Directivo extends Usuario {
     
     //Funcionalidades a ser añadidas en actualizaciones futuras
     public void consultarCentralDatabase(){
-        //TODO: Funcionalidad en construcción
+        //: Funcionalidad en construcción
     }
     
     public void consultarLocalDatabase(){
-        //TODO: Funcionalidad en construcción
+        //: Funcionalidad en construcción
     }
     
     public void agregarUsuario(){
-        //TODO: Funcionalidad en construcción
+        //: Funcionalidad en construcción
     }
 }
