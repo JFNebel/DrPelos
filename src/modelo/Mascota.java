@@ -19,13 +19,13 @@ public class Mascota {
      * Constructor de la clase
      * @param nombre
      * @param raza
-     * @param dueño
+     * @param dueno
      * @param transportable 
      */
-    public Mascota(String nombre, String raza, Cliente dueño, boolean transportable) {
+    public Mascota(String nombre, String raza, Cliente dueno, boolean transportable) {
         this.nombre = nombre;
         this.raza = raza;
-        this.dueno = dueño;
+        this.dueno = dueno;
         this.transportable = transportable;
     }
 
@@ -47,12 +47,12 @@ public class Mascota {
         this.raza = raza;
     }
 
-    public Cliente getDueño() {
+    public Cliente getDueno() {
         return dueno;
     }
 
-    public void setDueño(Cliente dueño) {
-        this.dueno = dueño;
+    public void setDueno(Cliente dueno) {
+        this.dueno = dueno;
     }
 
     public boolean isTransportable() {

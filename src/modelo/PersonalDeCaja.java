@@ -11,9 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+
 
 /** OJO, chequear el caso de BLAOTING para clases muy extensas (muchos métodos)
  * Es posible que sea necesario hacer otra clase o una interfaz
@@ -58,7 +56,7 @@ public class PersonalDeCaja extends Usuario{
     PreparedStatement pst;
     ResultSet rs;
     public boolean agregarCliente(Cliente cliente){
-        //TODO: Lógica para agregar un Cliente a la base de datos
+        //Lógica para agregar un Cliente a la base de datos
         String sql = "INSERT INTO Cliente (cedula,nombre,correo,celular,telefono,direccion) VALUES (?,?,?,?,?,?)";
 
 
@@ -101,7 +99,7 @@ public class PersonalDeCaja extends Usuario{
      */
     public boolean realizarVenta(Cotizacion cotizacion, Cliente cliente, TipoPago formaDePago){
         Factura factura = generarFactura(cotizacion, cliente, formaDePago);
-        //TODO: Lógica para almacenar la factura en base de datos local
+        //Lógica para almacenar la factura en base de datos local
         String sql = "INSERT INTO Cliente (idFactura,fechaEmision,sucursal,cliente,usuarioEmisor,tipoPago,iva,total) VALUES (?,?,?,?,?,?,?,?)";
         try 
         {
@@ -149,8 +147,9 @@ public class PersonalDeCaja extends Usuario{
     
     
     /**
-     * Hace una consulta sobre una entrega a la base de datos por medio del id del recibo
-     * @param recibo 
+     * Hace una consulta sobre una entrega a la base de datos por medio del id del recibo 
+     * @param tabla
+     * @param campo
      */
     public void consultarEntrega(String tabla,String campo){ 
         //TODO: Query a la base de datos
@@ -181,7 +180,7 @@ public class PersonalDeCaja extends Usuario{
      * @param recibo 
      */
     public void consultarTraslado(Recibo recibo){
-        //TODO: Query a la base de datos
+        // Query a la base de datos
         
     }
     
@@ -190,7 +189,7 @@ public class PersonalDeCaja extends Usuario{
      * @param nombre 
      */
     public void buscarProducto(String nombre){
-        //TODO: Query a la base de datos
+        //Query a la base de datos
         String sql = "SELECT * FROM Producto WHERE clave= ?";
 
         try{
@@ -217,7 +216,7 @@ public class PersonalDeCaja extends Usuario{
      * @param nombre 
      */
     public void buscarServicio(String nombre){
-        //TODO: Lógica para buscar servicios
+        //Lógica para buscar servicios
         String sql = "SELECT * FROM Servicio WHERE clave= ?";
 
         try{
@@ -245,7 +244,6 @@ public class PersonalDeCaja extends Usuario{
         return "PersonalDeCaja{" + this.userName + '}';
     }
     
-    //gettes, setters
     
     
 }

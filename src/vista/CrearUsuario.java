@@ -5,13 +5,6 @@
  */
 package vista;
 
-import java.awt.HeadlessException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
-import modelo.Conexion;
-
 /**
  *
  * @author ricar
