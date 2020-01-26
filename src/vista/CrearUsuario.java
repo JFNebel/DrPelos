@@ -177,24 +177,7 @@ public class CrearUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Connection reg = Conexion.getConexion();
         
-        try{
-            PreparedStatement pst = reg.prepareStatement("INSERT INTO administrador(cedula, nombre, correo, telefono, contrasena) VALUES(?,?,?,?)");
-            pst.setString(1,jTextField1.getText());
-            pst.setString(2,jTextField2.getText());
-            pst.setString(3,jTextField3.getText());
-            pst.setString(4,jTextField4.getText());            
-            
-        int a = pst.executeUpdate();
-        if(a > 0){
-            JOptionPane.showMessageDialog(null,"Registro exitoso");
-        }
-        else{
-             JOptionPane.showMessageDialog(null,"Error al agregar");
-        }
-        }catch(HeadlessException | SQLException e){
-        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

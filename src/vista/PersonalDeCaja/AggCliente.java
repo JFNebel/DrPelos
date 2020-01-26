@@ -214,8 +214,8 @@ public class AggCliente extends javax.swing.JFrame {
         //ControladorAggCliente controAggCliente = new ControladorAggCliente(this);
         //controAggCliente.actionPerformed(evt);
         MetodosConexion.guardar(txtcedula.getText(), txtnombre.getText(), txtcorreo.getText(), txtcelular.getText(), txtelefono.getText(), txtdireccion.getText());
-        
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -254,15 +254,17 @@ public class AggCliente extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new AggCliente().setVisible(true);
             }
         });
     }
-public void conectaControlador(ControladorAggCliente c){
-    jButton1.addActionListener(c);
-    
-}
+
+    public void conectaControlador(ControladorAggCliente c) {
+        jButton1.addActionListener(c);
+
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -310,7 +312,4 @@ public void conectaControlador(ControladorAggCliente c){
     public String getTxtnombre() {
         return txtnombre.getText();
     }
-
-
 }
-

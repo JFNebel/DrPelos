@@ -8,7 +8,7 @@ package modelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import javax.swing.JOptionPane;
+import java.sql.SQLException;
 
 /**
  *
@@ -38,7 +38,7 @@ public class MetodosConexion {
             
             resultado = sentenciaPreparada.executeUpdate();
             sentenciaPreparada.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
         return resultado;
@@ -58,7 +58,7 @@ public class MetodosConexion {
                 
             }
             conexionBd.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
         return busquedaNombre;
@@ -81,7 +81,7 @@ public class MetodosConexion {
                 
             }
             conexionBd.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e);
         }
         return busquedaUsuario;
