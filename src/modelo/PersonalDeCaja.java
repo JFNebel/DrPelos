@@ -76,17 +76,14 @@ public class PersonalDeCaja extends Usuario{
             
         if (i != 0)
         {    //visualiza
-                //JOptionPane.showMessageDialog(null,"Los datos se han guardado satisfactoriamente");
                 return true;
         }else{
             //visualiza
-            //JOptionPane.showMessageDialog(null,"Error en la transaccion");
                 return false;
         }
             
         }catch(SQLException e){            
             //para mostrar el error
-            //JOptionPane.showMessageDialog(null, e.getMessage());
             return false;
         }
     }
@@ -119,17 +116,14 @@ public class PersonalDeCaja extends Usuario{
             
         if (i != 0)
         {    //visualiza
-                //JOptionPane.showMessageDialog(null,"Los datos se han guardado satisfactoriamente");
                 return true;
         }else{
             //visualiza
-            //JOptionPane.showMessageDialog(null,"Error en la transaccion");
                 return false;
         }
             
         }catch(SQLException e){            
             //para mostrar el error
-            //JOptionPane.showMessageDialog(null, e.getMessage());
             return false;
         }
     }
@@ -169,7 +163,6 @@ public class PersonalDeCaja extends Usuario{
         }
         catch(SQLException e){            
         //para mostrar el error
-            //JOptionPane.showMessageDialog(null, e.getMessage());
             System.out.println(e);
         }
     }
@@ -199,14 +192,12 @@ public class PersonalDeCaja extends Usuario{
             rs = pst.executeQuery();
             
             if(rs.next()){
-                //metodo_para_mostrar_en_la_vista(rs.getCampo("id"))
                 //asi para todos los campos que se quiera mostrar en la vista
             }
             
         }
         catch(SQLException e){            
         //para mostrar el error
-            //JOptionPane.showMessageDialog(null, e.getMessage());
             System.out.println(e);
         }
     }
@@ -234,7 +225,6 @@ public class PersonalDeCaja extends Usuario{
         }
         catch(SQLException e){            
         //para mostrar el error
-            //JOptionPane.showMessageDialog(null, e.getMessage());
             System.out.println(e);
         }
     }

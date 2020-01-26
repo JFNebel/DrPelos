@@ -36,8 +36,7 @@ public class Factura extends Recibo{
     }
 
     public int generarAleatorio(){
-        int numero= (int)(Math.random()*100+1);
-        return numero;
+        return(int)(Math.random()*100+1);
     }
             
     public Cliente getEmisor() {

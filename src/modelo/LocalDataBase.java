@@ -9,6 +9,7 @@ package modelo;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -16,7 +17,7 @@ import java.util.List;
  * @author Juan Nebel
  */
 public class LocalDataBase {
-    private final HashMap<Producto, Integer> stock; //Mapa de productos y su cantidad
+    private final Map<Producto, Integer> stock; //Mapa de productos y su cantidad
     private final List<Factura> transacciones;
     private final List<Cliente> clientes;
     private final List<Entrega> entregas;
@@ -36,7 +37,7 @@ public class LocalDataBase {
    
     
     //Técnica de encapsulamiento de HashMap
-    public HashMap<Producto, Integer> getStock() {
+    public Map<Producto, Integer> getStock() {
         return stock;
     }
     public void addProducto(Producto producto, int cantidad) {

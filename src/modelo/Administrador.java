@@ -55,11 +55,11 @@ public class Administrador extends Usuario {
     
     //Funcionalidades a ser añadidas en actualizaciones futuras (el documento no pide su implementación)
     public void gestionarLocalDatabase(){
-        //TODO: Funcionalidad en construcción
+        //Funcionalidad en construcción
     }
     
     public void agregarUsuario(){
-        //TODO: Funcionalidad en construcción
+        // Funcionalidad en construcción
     }
     
     

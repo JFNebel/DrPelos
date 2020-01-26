@@ -33,20 +33,13 @@ public class Conexion {
             con = (Connection) DriverManager.getConnection(url, user, pass);
             // Si la conexion fue exitosa mostramos un mensaje de conexion exitosa
             if (con != null) {
-                //jLabel1.setText("Conexion establecida");
                 System.out.println("Conexion establecida");
             }
         } // Si la conexion NO fue exitosa mostramos un mensaje de error
         catch (ClassNotFoundException | SQLException e) {
-            //jLabel1.setText("Error de conexion" + e);
             System.out.println("Error de conexion" + e);
         }
         return con;
     }
 
-    /*// Aqui muestra para ver si se conecto
-    public static void main(String[] args) {
-         Conexion coneccion= new Conexion();
-         coneccion.getConexion();
-    }*/
 }

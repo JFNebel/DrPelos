@@ -6,11 +6,6 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -26,7 +21,6 @@ public class ClienteTest {
      */
     @Test
     public void testAddMascota() {
-        System.out.println("testAddMascota");
         ArrayList<Mascota> mascT = new ArrayList<>();
         Cliente cliente = new Cliente("Cliente1", "Santana",950,"villa del rey", "adsfdsa@hotmail.com","0926378864","0930229");        
         Mascota masc1 = new Mascota( "Tai", "Siamés", cliente, true);
@@ -49,7 +43,6 @@ public class ClienteTest {
      */
     @Test
     public void testRemoveMascota() {
-        System.out.println("testRemoveMascota");
         ArrayList<Mascota> mascT = new ArrayList<>();
         Cliente cliente = new Cliente("Cliente1", "Santana",950,"villa del rey", "adsfdsa@hotmail.com","0926378864","0930229");        
         Mascota masc1 = new Mascota( "Tai", "Siamés", cliente, true);

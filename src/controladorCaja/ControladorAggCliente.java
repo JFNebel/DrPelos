@@ -47,9 +47,6 @@ public class ControladorAggCliente implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Ingreso incorrecto de datos");
             }
 
-            //llamar agregarcliente de la clase personaldecaja
-            //falta agregar barras a la vista
-            //personal.agregarCliente(new Cliente(nombre,apellido,cedula,direccion));
         }
 
     }
