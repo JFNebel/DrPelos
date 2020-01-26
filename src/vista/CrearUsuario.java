@@ -5,6 +5,13 @@
  */
 package vista;
 
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import modelo.Conexion;
+
 /**
  *
  * @author ricar
@@ -68,6 +75,11 @@ public class CrearUsuario extends javax.swing.JFrame {
         jLabel6.setText("Rol:");
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -159,8 +171,31 @@ public class CrearUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        SistemaGeneral a = new SistemaGeneral();
+        a.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Connection reg = Conexion.getConexion();
+        
+        try{
+            PreparedStatement pst = reg.prepareStatement("INSERT INTO administrador(cedula, nombre, correo, telefono, contrasena) VALUES(?,?,?,?)");
+            pst.setString(1,jTextField1.getText());
+            pst.setString(2,jTextField2.getText());
+            pst.setString(3,jTextField3.getText());
+            pst.setString(4,jTextField4.getText());            
+            
+        int a = pst.executeUpdate();
+        if(a > 0){
+            JOptionPane.showMessageDialog(null,"Registro exitoso");
+        }
+        else{
+             JOptionPane.showMessageDialog(null,"Error al agregar");
+        }
+        }catch(HeadlessException | SQLException e){
+        } 
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

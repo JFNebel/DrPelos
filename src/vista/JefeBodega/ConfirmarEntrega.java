@@ -5,7 +5,7 @@
  */
 package vista.JefeBodega;
 
-import vista.Administrador.*;
+import vista.MenuJefeBodega;
 
 /**
  *
@@ -40,7 +40,7 @@ public class ConfirmarEntrega extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel5.setText("Estado del pedido");
+        jLabel5.setText("Confirmar Entrega");
 
         jLabel7.setText("Id Pedido:");
 
@@ -60,6 +60,11 @@ public class ConfirmarEntrega extends javax.swing.JFrame {
         });
 
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jCheckBox3.setText("Entregado");
 
@@ -134,6 +139,12 @@ public class ConfirmarEntrega extends javax.swing.JFrame {
     private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.setVisible(false);
+        MenuJefeBodega a = new MenuJefeBodega();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

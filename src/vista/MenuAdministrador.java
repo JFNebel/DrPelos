@@ -47,7 +47,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Agregar Producto");
+        jButton2.setText("Solicitar Producto");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

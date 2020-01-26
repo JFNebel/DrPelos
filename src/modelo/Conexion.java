@@ -8,6 +8,7 @@ package modelo;
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,10 +18,10 @@ public class Conexion {
     // Declaramos la conexion a mysql
     private static Connection con;
     // Declaramos los datos de conexion a la bd
-    private static final String driver="com.mysql.jdbc.Driver";
-    private static final String user="root";
-    private static final String pass="secret";
-    private static final String url="jdbc:mysql://192.168.99.100:33060/DrPelos";
+    private static final String DRIVER = "com.mysql.jdbc.Driver";
+    private static final String USER = "root";
+    private static final String PASS = "123456";
+    private static final String URL = "jdbc:mysql://localhost:3306/DrPelos";
     
     
         // Funcion que va conectarse a mi bd de mysql
@@ -28,9 +29,9 @@ public class Conexion {
         // Reseteamos a null la conexion a la bd
         con=null;
         try{
-            Class.forName(driver);
+            Class.forName(DRIVER );
             // Nos conectamos a la bd
-            con= (Connection) DriverManager.getConnection(url, user, pass);
+            con = (Connection) DriverManager.getConnection(URL, USER , PASS);
             // Si la conexion fue exitosa mostramos un mensaje de conexion exitosa
             if (con!=null){
                 //jLabel1.setText("Conexion establecida");

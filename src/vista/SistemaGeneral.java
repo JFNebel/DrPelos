@@ -134,25 +134,25 @@ public class SistemaGeneral extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
-        MenuJefeBodega a = new MenuJefeBodega();
+        Login a = new Login();
         a.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        MenuAdministrador a = new MenuAdministrador();
+        Login a = new Login();
         a.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         this.setVisible(false);
-        MenuDirectivo a = new MenuDirectivo();
+        Login a = new Login();
         a.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.setVisible(false);
-        MenuPersonalCaja a = new MenuPersonalCaja();
+        Login a = new Login();
         a.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
